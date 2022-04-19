@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Dolphin</title>
+	<link rel="stylesheet" type="text/css" href="semana_13_inicio_estilos.css">
+</head>
+<body>
+	<img src="DOLPHIN2.jpg" class="imagen_1">
+	<a href="pagina_13_inicio.html"><div class="boton_login">Login</div></a>
+	<a href="pagina_13_inicio.html"><div class="boton_registro">Registro</div></a>
+	<div class="pie_de_pagina_1">Aprende jugando</div>
+	<div class="imagen_2" onclick="cambio1()" id="imagen"></div>
+	<div class="menu_1" id="menu">
+		<br>
+		<a href="pagina_13_inicio.html"><div class="opcion_1">Ayuda</div></a>
+		<br>
+		<a href="pagina_13_inicio.html"><div class="opcion_1">Contáctanos</div></a>
+		<br>
+		<a href="pagina_13_inicio.html"><div class="opcion_1">Acerca de Dolphin</div></a>
+	</div>
+
+	<script type="text/javascript">
+		let a=0;
+		let imagen=document.getElementById("imagen");
+		let menu=document.getElementById("menu");
+		function cambio1() {
+			if (a==0) {
+				imagen.style.animationName="ani_1_imagen_2";
+				imagen.style.animationIterationCount=1;
+				imagen.style.animationDuration="1s";
+				menu.style.animationName="ani_1_menu_1";
+				menu.style.animationIterationCount=1;
+				menu.style.animationDuration="1s";
+				setTimeout(cambio12,1000);
+				a=1;
+				console.log("a");
+			} else {
+			if (a==1) {
+				imagen.style.animationName="ani_2_imagen_2";
+				imagen.style.animationIterationCount=1;
+				imagen.style.animationDuration="1s";
+				menu.style.animationName="ani_2_menu_1";
+				menu.style.animationIterationCount=1;
+				menu.style.animationDuration="1s";
+				setTimeout(cambia,1000);
+				a=0;
+				console.log("b");
+			}}
+		}
+		function cambio12() {
+			imagen.style.left="25%";
+			menu.style.left="1%";
+			imagen.style.backgroundImage='url("Flecha6.png")';
+			imagen.style.animationIterationCount=0;
+			menu.style.animationIterationCount=0;
+			console.log("c");
+		}
+		function cambia() {
+			imagen.style.left="1%";
+			menu.style.left="-23%";
+			imagen.style.backgroundImage='url("Flecha5.png")';
+			imagen.style.animationIterationCount=0;
+			menu.style.animationIterationCount=0;
+			console.log("d");
+		}
+	</script>
+
+</body>
+</html>
